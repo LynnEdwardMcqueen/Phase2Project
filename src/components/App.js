@@ -8,6 +8,8 @@ import Nuggets from "./Nuggets.js"
 import Rockies from "./Rockies.js"
 import NavBar from "./Navbar.js"
 import Home from "./Home.js"
+import Delete from "./Delete.js"
+import Edit from "./Edit.js"
 
 function App() {
   const [championshipRecords, setChampionshipRecords] = useState([])
@@ -22,24 +24,41 @@ function App() {
   }, [] )
 
 
+  function championshipRecordsFilter( desiredTeam ) {
+    return (championshipRecords.filter((title) => {
+      if (title.team === desiredTeam) {
+        return true
+      } else {
+        return false
+      }
+    }))
+  }
 
 
   return (
+
     <div>
       <NavBar/>
       <Switch>
         <Route path="/Rockies" >
-          <Rockies titles = {championshipRecords} />
+          <Rockies titles = {championshipRecordsFilter("Rockies")} />
         </Route>
         <Route path= "/Broncos" >
-          <Broncos titles = {championshipRecords} />
+          <Broncos titles = {championshipRecordsFilter("Broncos")} />
         </Route>
         <Route path = "/Avalanche">
-          <Avalanche titles = {championshipRecords} />
+          <Avalanche titles = {championshipRecordsFilter("Avalanche")} />
         </Route>
         <Route path = "/Nuggets">
-          <Nuggets titles = {championshipRecords} />
+          <Nuggets titles = {championshipRecordsFilter("Nuggets")} />
         </Route>
+        <Route path = "/Delete">
+          <Delete titles =  {championshipRecords}/>
+        </Route>
+        <Route path = "/Edit">
+          <Edit titles =  {championshipRecords} />
+        </Route>
+
         <Route exact path= "/">
           <Home />
         </Route>

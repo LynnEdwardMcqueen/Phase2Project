@@ -56,6 +56,26 @@ function NavBar() {
       >
         Rockies
       </NavLink>
+
+      <NavLink
+        to="/Delete"
+        /* add prop for activeStyle */
+        activeStyle={{
+          background: "darkblue",
+        }}
+      >
+        Delete
+      </NavLink>
+
+      <NavLink
+        to="/Edit"
+        /* add prop for activeStyle */
+        activeStyle={{
+          background: "darkblue",
+        }}
+      >
+        Edit
+      </NavLink>
   </div>;
 }
 
