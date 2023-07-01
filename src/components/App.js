@@ -10,6 +10,7 @@ import NavBar from "./Navbar.js"
 import Home from "./Home.js"
 import Delete from "./Delete.js"
 import Edit from "./Edit.js"
+import { toBeRequired } from "@testing-library/jest-dom/matchers";
 
 function App() {
   const [championshipRecords, setChampionshipRecords] = useState([])
@@ -34,6 +35,16 @@ function App() {
     }))
   }
 
+  function handleDeletion(deletionIndex) {
+    setChampionshipRecords(championshipRecords.filter((championship) => {
+      if (championship.id === deletionIndex) {
+        return false;
+      } else {
+        return true;
+      }
+    }))
+  }
+
 
   return (
 
@@ -53,7 +64,7 @@ function App() {
           <Nuggets titles = {championshipRecordsFilter("Nuggets")} />
         </Route>
         <Route path = "/Delete">
-          <Delete titles =  {championshipRecords}/>
+          <Delete titles =  {championshipRecords} onDeletionSubmit = {handleDeletion} />
         </Route>
         <Route path = "/Edit">
           <Edit titles =  {championshipRecords} />
