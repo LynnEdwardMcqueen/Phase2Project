@@ -10,13 +10,18 @@ import NavBar from "./Navbar.js"
 import Home from "./Home.js"
 
 function App() {
+  const [championshipRecords, setChampionshipRecords] = useState([])
+
   useEffect(() => {fetch("http://localhost:4000/Denver-Champions")
   .then((response) => response.json())
   .then((data) => {
     console.log("Here at fetch")
     console.log(data)
+    setChampionshipRecords(data)
   });
   }, [] )
+
+
 
 
   return (
@@ -24,7 +29,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route path="/Rockies" >
-          <Rockies />
+          <Rockies titles = {championshipRecords} />
         </Route>
         <Route path= "/Broncos" >
           <Broncos />

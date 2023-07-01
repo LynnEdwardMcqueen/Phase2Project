@@ -1,7 +1,8 @@
 import React from "react";
 
-function Rockies( ) {
+function Rockies({titles} ) {
   console.log("Rockies")
+  console.log(titles)
   return (
     <p> Rockies </p>
   )
