@@ -1,7 +1,8 @@
 import React from "react";
 
-function Avalanche( ) {
+function Avalanche({titles} ) {
   console.log("Avalanche")
+  console.log(titles)
   return (
     <p> Avalanche </p>
   )

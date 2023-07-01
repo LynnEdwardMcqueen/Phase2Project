@@ -32,13 +32,13 @@ function App() {
           <Rockies titles = {championshipRecords} />
         </Route>
         <Route path= "/Broncos" >
-          <Broncos />
+          <Broncos titles = {championshipRecords} />
         </Route>
         <Route path = "/Avalanche">
-          <Avalanche />
+          <Avalanche titles = {championshipRecords} />
         </Route>
         <Route path = "/Nuggets">
-          <Nuggets />
+          <Nuggets titles = {championshipRecords} />
         </Route>
         <Route exact path= "/">
           <Home />

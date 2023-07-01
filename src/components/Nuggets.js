@@ -1,7 +1,8 @@
 import React from "react";
 
-function Nuggets( ) {
+function Nuggets( {titles} ) {
   console.log("Nuggets")
+  console.log(titles)
   return (
     <p> Nuggets </p>
   )
