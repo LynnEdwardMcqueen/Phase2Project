@@ -22,8 +22,15 @@ function ChampionshipDataForm({titleToEdit, formVisibility}) {
   function updateMVPPicture(event) {
     setChampionMVPPicture(event.target.value)
   }
+
+  function handleSubmitEvent(event) {
+    event.preventDefault();
+    let editedEntry = {id:null, team: championTeam, year: championYear, mvp: championMVP, image: championMVPPicture}
+    return(editedEntry)
+  }
+  
   return (
-    <form style = {{visibility: `${formVisibility}`}}>
+    <form style = {{visibility: `${formVisibility}`} }>
       <label htmlFor = "team">Team</label>
       <input id= "team" type="text" value = {championTeam} onChange = {updateTeam} /><br />
       <label htmlFor = "year">Year</label>
@@ -32,6 +39,7 @@ function ChampionshipDataForm({titleToEdit, formVisibility}) {
       <input id = "mvp" type = "text" value = {championMVP} onChange = {updateMVP} /> <br />
       <label htmlFor = "mvpPicture">MVP Image</label>
       <input id = "mvpPicture" type = "text" value = {championMVPPicture} onChange = {updateMVPPicture} />
+      <input type = "submit" onSubmit = {handleSubmitEvent} />
     </form>
   )
 }
