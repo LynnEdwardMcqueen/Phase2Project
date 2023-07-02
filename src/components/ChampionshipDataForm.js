@@ -13,7 +13,7 @@ debugger
   return (
     <form style = {{visibility: `${formVisibility}`}}>
       <label htmlFor = "team">Team</label>
-      <input id= "team" type="text" value = {championYear} /><br />
+      <input id= "team" type="text" value = {championTeam} /><br />
       <label htmlFor = "year">Year</label>
       <input id = "year" type = "number" value = {championYear} /> <br />
       <label htmlFor = "mvp">MVP</label>
