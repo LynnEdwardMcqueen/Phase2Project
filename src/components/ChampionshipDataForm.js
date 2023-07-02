@@ -16,7 +16,6 @@ function ChampionshipDataForm({titleToEdit, formVisibility, onDataFormSubmit}) {
   }
 
   function updateMVP(event) {
-    debugger
     setChampionMVP(event.target.value)
   }
 
@@ -26,7 +25,6 @@ function ChampionshipDataForm({titleToEdit, formVisibility, onDataFormSubmit}) {
 
   function handleSubmitEvent(event) {
     event.preventDefault();
-    debugger
     let editedEntry = {id:null, team: championTeam, year: championYear, mvp: championMVP, image: championMVPPicture}
     onDataFormSubmit(editedEntry)
   }
