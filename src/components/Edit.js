@@ -8,6 +8,7 @@ function Edit( {titles}) {
   let [inputFormVisibility, updateInputFormVisibility] = useState("hidden")
 
   function recordEditId(event) {
+    debugger
     console.log("recordEditId = ", Number(event.target.value))
     updateEditId(Number(event.target.value))
   }
@@ -20,6 +21,17 @@ function Edit( {titles}) {
     debugger
   }
 
+  function championshipToEdit() {
+    for (let i = 0; i < titles.length; i++) {
+        if (titles[i].id === idForEdit) {
+            debugger
+            return(titles[i])
+        }
+    }
+    debugger
+    return{}
+  }
+
 
 
 
@@ -27,7 +39,7 @@ function Edit( {titles}) {
     <div className="Filter">
       <p>Edit</p>
       <SelectTeam titlesList = {titles} actionName = "Edit" onSelectValueChange = {recordEditId} onSubmitHandler = {editTeamSubmitEvent} />
-      <ChampionshipDataForm  formVisibility = {inputFormVisibility} />
+      <ChampionshipDataForm titleToEdit = {championshipToEdit()} formVisibility = {inputFormVisibility} />
     </div>
   )
 
