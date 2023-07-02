@@ -8,7 +8,6 @@ function Edit( {titles}) {
   let [inputFormVisibility, updateInputFormVisibility] = useState("hidden")
 
   function recordEditId(event) {
-    debugger
     console.log("recordEditId = ", Number(event.target.value))
     updateEditId(Number(event.target.value))
   }
@@ -18,28 +17,40 @@ function Edit( {titles}) {
     console.log("Edit team submit received")
     console.log("id for edit = ", idForEdit)
     updateInputFormVisibility("visible")
-    debugger
   }
 
   function championshipToEdit() {
+    debugger
     for (let i = 0; i < titles.length; i++) {
         if (titles[i].id === idForEdit) {
-            debugger
             return(titles[i])
         }
     }
-    debugger
     return{}
   }
 
-
+  function setupReturnValue() {
+    if (inputFormVisibility === "visible") {
+        return (
+          <>
+            <SelectTeam titlesList = {titles} actionName = "Edit" onSelectValueChange = {recordEditId} onSubmitHandler = {editTeamSubmitEvent} />
+            <ChampionshipDataForm titleToEdit = {championshipToEdit()} formVisibility = {inputFormVisibility} />
+          </>
+        )
+    } else {
+      return (
+        <>
+          <SelectTeam titlesList = {titles} actionName = "Edit" onSelectValueChange = {recordEditId} onSubmitHandler = {editTeamSubmitEvent} />
+        </>
+      )
+    }
+  }
 
 
   return (
     <div className="Filter">
       <p>Edit</p>
-      <SelectTeam titlesList = {titles} actionName = "Edit" onSelectValueChange = {recordEditId} onSubmitHandler = {editTeamSubmitEvent} />
-      <ChampionshipDataForm titleToEdit = {championshipToEdit()} formVisibility = {inputFormVisibility} />
+      {setupReturnValue()} 
     </div>
   )
 
