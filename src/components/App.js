@@ -38,7 +38,6 @@ function App() {
   }
 
   function handleDeletion(deletionIndex) {
-
     setChampionshipRecords(championshipRecords.filter((championship) => {
       if (championship.id === deletionIndex) {
         return false;
@@ -56,10 +55,12 @@ function App() {
         break
       }
     }
+    setChampionshipRecords(updatedChampionshipRecords)
+  }
 
+  function addChampionship(newChampionship) {
     debugger
-    setChampionshipRecords(championshipRecords)
-
+    setChampionshipRecords([...championshipRecords, newChampionship])
   }
 
 
@@ -67,7 +68,7 @@ function App() {
 
   return (
 
-    <div>
+    <div id = "nav">
       <NavBar/>
       <Switch>
         <Route path="/Rockies" >
@@ -83,7 +84,7 @@ function App() {
           <Nuggets titles = {championshipRecordsFilter("Nuggets")} />
         </Route>
         <Route path = "/Add">
-          <Add /> 
+          <Add titles = {championshipRecords} onAddSubmission = {addChampionship} /> 
         </Route>
         <Route path = "/Delete">
           <Delete titles =  {championshipRecords} onDeletionSubmit = {handleDeletion} />
