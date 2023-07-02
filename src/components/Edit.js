@@ -17,9 +17,31 @@ function Edit( {titles, onEditSubmit}) {
   }
 
   function handleEditUpdate(updatedEntry) {
-    updatedEntry[id] = idForEdit
+    updatedEntry.id = idForEdit
     
+    debugger
+    fetch(`http://localhost:4000/Denver-Champions/${idForEdit}`, {
+      method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          team: updatedEntry.team,
+          year: updatedEntry.year,
+          id: updatedEntry.id,
+          mvp: updatedEntry.mvp,
+          image: updatedEntry.image
+        }),
+      })
+        .then((r) => r.json())
+        .then((updatedData) => {
+
+          console.log(updatedData)
+          debugger
+          onEditSubmit(updatedData)
+        });
   }
+ 
   function championshipToEdit() {
     debugger
     for (let i = 0; i < titles.length; i++) {
@@ -35,7 +57,7 @@ function Edit( {titles, onEditSubmit}) {
         return (
           <>
             <SelectTeam titlesList = {titles} actionName = "Edit" onSelectValueChange = {recordEditId} onSubmitHandler = {editTeamSubmitEvent} />
-            <ChampionshipDataForm titleToEdit = {championshipToEdit()} formVisibility = {inputFormVisibility} />
+            <ChampionshipDataForm titleToEdit = {championshipToEdit()} formVisibility = {inputFormVisibility} onDataFormSubmit = {handleEditUpdate} />
           </>
         )
     } else {

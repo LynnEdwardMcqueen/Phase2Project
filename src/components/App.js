@@ -48,6 +48,20 @@ function App() {
     }))
   }
 
+  function handleEntryEdit(editedEntry) {
+    let updatedChampionshipRecords = [...championshipRecords]
+    for (let i = 0; i < updatedChampionshipRecords.length; i++) {
+      if (updatedChampionshipRecords[i].id === editedEntry.id) {
+        updatedChampionshipRecords[i] = editedEntry
+        break
+      }
+    }
+
+    debugger
+    setChampionshipRecords(championshipRecords)
+
+  }
+
 
 
 
@@ -75,7 +89,7 @@ function App() {
           <Delete titles =  {championshipRecords} onDeletionSubmit = {handleDeletion} />
         </Route>
         <Route path = "/Edit">
-          <Edit titles =  {championshipRecords} />
+          <Edit titles =  {championshipRecords} onEditSubmit = {handleEntryEdit} />
         </Route>
 
         <Route exact path= "/">

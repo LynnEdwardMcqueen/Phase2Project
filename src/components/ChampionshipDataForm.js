@@ -1,7 +1,7 @@
 import React from "react";
 import { useState} from "react";
 
-function ChampionshipDataForm({titleToEdit, formVisibility}) {
+function ChampionshipDataForm({titleToEdit, formVisibility, onDataFormSubmit}) {
   let [championTeam, setChampionTeam] = useState(titleToEdit.team)
   let [championYear, setChampionYear] = useState(titleToEdit.year)
   let [championMVP, setChampionMVP] = useState(titleToEdit.mvp)
@@ -16,6 +16,7 @@ function ChampionshipDataForm({titleToEdit, formVisibility}) {
   }
 
   function updateMVP(event) {
+    debugger
     setChampionMVP(event.target.value)
   }
 
@@ -25,12 +26,13 @@ function ChampionshipDataForm({titleToEdit, formVisibility}) {
 
   function handleSubmitEvent(event) {
     event.preventDefault();
+    debugger
     let editedEntry = {id:null, team: championTeam, year: championYear, mvp: championMVP, image: championMVPPicture}
-    return(editedEntry)
+    onDataFormSubmit(editedEntry)
   }
-  
+
   return (
-    <form style = {{visibility: `${formVisibility}`} }>
+    <form style = {{visibility: `${formVisibility}`} }  onSubmit = {handleSubmitEvent} >
       <label htmlFor = "team">Team</label>
       <input id= "team" type="text" value = {championTeam} onChange = {updateTeam} /><br />
       <label htmlFor = "year">Year</label>
@@ -39,7 +41,7 @@ function ChampionshipDataForm({titleToEdit, formVisibility}) {
       <input id = "mvp" type = "text" value = {championMVP} onChange = {updateMVP} /> <br />
       <label htmlFor = "mvpPicture">MVP Image</label>
       <input id = "mvpPicture" type = "text" value = {championMVPPicture} onChange = {updateMVPPicture} />
-      <input type = "submit" onSubmit = {handleSubmitEvent} />
+      <input type = "submit" />
     </form>
   )
 }
