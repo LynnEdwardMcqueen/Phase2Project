@@ -9,7 +9,8 @@ function ChampionshipDataForm({titleToEdit, formVisibility}) {
   }
   return (
     <form style = {{visibility: `${formVisibility}`}}>
-       <input type="text" value = {championTeam} /><br />
+       <label for = "team">Team</label>
+       <input id= "team" type="text" value = {championTeam} /><br />
     </form>
        
   )
