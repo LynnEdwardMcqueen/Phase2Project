@@ -5,6 +5,7 @@ function ChampionshipDataForm({titleToEdit, formVisibility}) {
   let [championTeam, setChampionTeam] = useState(titleToEdit ? titleToEdit.team : "")
   let [championYear, setChampionYear] = useState(titleToEdit ? titleToEdit.year : "")
   let [championMVP, setChampionMVP] = useState(titleToEdit ? titleToEdit.mvp : "")
+  let [championMVPPicture, setChampionMVPPicture] = useState(titleToEdit ? titleToEdit.image : "")
   if (formVisibility === "visible") {
       console.log("titleToEdit = ", titleToEdit);
       debugger
@@ -16,7 +17,9 @@ function ChampionshipDataForm({titleToEdit, formVisibility}) {
        <label for = "year">Year</label>
        <input id = "year" type = "number" value = {championYear} /> <br />
        <label for = "mvp">MVP</label>
-       <input id = "mvp" type = "text" />
+       <input id = "mvp" type = "text" /> <br />
+       <label for = "mvpPicture">MVP Image</label>
+       <input id = "mvpPicture" type = "text" />
     </form>
        
   )
