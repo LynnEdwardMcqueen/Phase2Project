@@ -8,6 +8,7 @@ import Nuggets from "./Nuggets.js"
 import Rockies from "./Rockies.js"
 import NavBar from "./Navbar.js"
 import Home from "./Home.js"
+import Add from "./Add.js"
 import Delete from "./Delete.js"
 import Edit from "./Edit.js"
 import { toBeRequired } from "@testing-library/jest-dom/matchers";
@@ -26,6 +27,7 @@ function App() {
 
 
   function championshipRecordsFilter( desiredTeam ) {
+
     return (championshipRecords.filter((title) => {
       if (title.team === desiredTeam) {
         return true
@@ -36,6 +38,7 @@ function App() {
   }
 
   function handleDeletion(deletionIndex) {
+
     setChampionshipRecords(championshipRecords.filter((championship) => {
       if (championship.id === deletionIndex) {
         return false;
@@ -44,6 +47,8 @@ function App() {
       }
     }))
   }
+
+
 
 
   return (
@@ -62,6 +67,9 @@ function App() {
         </Route>
         <Route path = "/Nuggets">
           <Nuggets titles = {championshipRecordsFilter("Nuggets")} />
+        </Route>
+        <Route path = "/Add">
+          <Add /> 
         </Route>
         <Route path = "/Delete">
           <Delete titles =  {championshipRecords} onDeletionSubmit = {handleDeletion} />

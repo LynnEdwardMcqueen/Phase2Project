@@ -58,6 +58,15 @@ function NavBar() {
       </NavLink>
 
       <NavLink
+        to="/Add"
+        /* add prop for activeStyle */
+        activeStyle={{
+          background: "darkblue",
+        }}
+      >
+        Add
+      </NavLink>
+      <NavLink
         to="/Delete"
         /* add prop for activeStyle */
         activeStyle={{

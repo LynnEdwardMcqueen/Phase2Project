@@ -1,5 +1,6 @@
 import React from "react";
 import { useState} from "react";
+import SelectTeam from "./SelectTeam.js"
 
 function Delete( {titles, onDeletionSubmit} ) {
   let [idForDeletion, updateDeletionId] = useState(0)
@@ -10,35 +11,31 @@ function Delete( {titles, onDeletionSubmit} ) {
       method: "DELETE",
     })
     .then((r) => r.json())
-    .then(() => onDeletionSubmit(idForDeletion));
+    .then(() => {
+        debugger
+        if (Number.isInteger(idForDeletion)) {
+            console.log("idForDeletion Integer")
+        } else {
+            console.log("idForDeletion !Integer")
+        }
+        console.log("idForDeletion = ", typeof(idForDeletion))
+        onDeletionSubmit(idForDeletion)
+    })
   }
 
+
   function recordDeletionId(event) {
-    console.log("recordDeletionId = ", event.target.value)
+    console.log("recordDeletionId = ", Number(event.target.value))
     debugger
-    updateDeletionId(event.target.value)
+    updateDeletionId(Number(event.target.value))
   }
 
 
 
   return (
     <div className="Filter">
-      <form className="DeleteItem" onSubmit= {handleItemDeletionSubmitEvent}>
-        <p>Which championship do you want to delete?</p>
-
-
-        <select name="deteteChampion" onChange={recordDeletionId} >
-          <option value = "0">None</option>
-          {titles.map((title) => {
-            return (
-              <option key = {title.id} value = {title.id}>{title.year + " " + title.team}</option>
-            )
-          })}
-        </select>
-
-        <button type="submit"> Choose Title To Delete </button>
-
-      </form>
+      <p>Delete</p>
+      <SelectTeam titlesList = {titles} actionName = "delete" onSelectValueChange = {recordDeletionId} onSubmitHandler = {handleItemDeletionSubmitEvent} />
     </div>
   )
 }
