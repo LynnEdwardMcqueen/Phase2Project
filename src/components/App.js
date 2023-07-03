@@ -63,7 +63,7 @@ function App() {
   }
 
   debugger
-  console.log()
+
   let testList = championshipRecordsFilter("Broncos")
   debugger
 

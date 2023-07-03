@@ -14,7 +14,7 @@ import VonnMiller from '../pictures/vonn-miller.jpg'
 
 
 function Cards ({championList}) {
-    console.log(championList)
+    
     debugger
 
   function pictureServer(player) {

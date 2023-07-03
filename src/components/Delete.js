@@ -18,7 +18,6 @@ function Delete( {titles, onDeletionSubmit} ) {
 
 
   function recordDeletionId(event) {
-    console.log("recordDeletionId = ", Number(event.target.value))
     debugger
     updateDeletionId(Number(event.target.value))
   }
