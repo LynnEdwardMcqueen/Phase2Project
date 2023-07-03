@@ -10,8 +10,8 @@
     {
       "id": 2,
       "team": "Broncos",
-      "year": 1999,
-      "mvp": "Moe Howard",
+      "year": "2099",
+      "mvp": "John Elway",
       "image": "../pictures/John-Elway.jpg"
     },
     {

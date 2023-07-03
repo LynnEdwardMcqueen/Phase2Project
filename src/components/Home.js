@@ -4,7 +4,11 @@ function Home() {
 
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>A Tribute to the Champions of Denver! </h1>
+      <bk />
+      <p>Denver has been blessed with many championship teams, most recently the Denver Nuggets of the NBA.</p>
+      <p>This site documents the accomplishments of Denver teams over the years</p>
+
     </div>
   )
 
