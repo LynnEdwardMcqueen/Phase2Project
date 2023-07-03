@@ -1,10 +1,10 @@
 import React from "react";
+import Cards from "./Cards.js"
 
 function Nuggets( {titles} ) {
-  console.log("Nuggets")
-  console.log(titles)
+  
   return (
-    <p> Nuggets </p>
+    <Cards championList = {titles} />
   )
 }
 
