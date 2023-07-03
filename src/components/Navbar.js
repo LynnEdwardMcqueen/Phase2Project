@@ -11,7 +11,7 @@ function NavBar() {
         exact
         /* add prop for activeStyle */
         activeStyle={{
-          background: "darkblue",
+          background: "lightblue",
         }}
       >
         Home
@@ -21,7 +21,7 @@ function NavBar() {
         to="/Avalanche"
         /* add prop for activeStyle */
         activeStyle={{
-          background: "darkblue",
+          background: "lightblue",
         }}
       >
         Avalanche
@@ -31,7 +31,7 @@ function NavBar() {
         to="/Broncos"
         /* add prop for activeStyle */
         activeStyle={{
-          background: "darkblue",
+          background: "lightblue",
         }}
       >
         Broncos
@@ -41,7 +41,7 @@ function NavBar() {
         to="/Nuggets"
         /* add prop for activeStyle */
         activeStyle={{
-          background: "darkblue",
+          background: "lightblue",
         }}
       >
         Nuggets
@@ -51,7 +51,7 @@ function NavBar() {
         to="/Rockies"
         /* add prop for activeStyle */
         activeStyle={{
-          background: "darkblue",
+          background: "lightblue",
         }}
       >
         Rockies
@@ -61,7 +61,7 @@ function NavBar() {
         to="/Add"
         /* add prop for activeStyle */
         activeStyle={{
-          background: "darkblue",
+          background: "lightblue",
         }}
       >
         Add
@@ -70,7 +70,7 @@ function NavBar() {
         to="/Delete"
         /* add prop for activeStyle */
         activeStyle={{
-          background: "darkblue",
+          background: "lightblue",
         }}
       >
         Delete
@@ -80,7 +80,7 @@ function NavBar() {
         to="/Edit"
         /* add prop for activeStyle */
         activeStyle={{
-          background: "darkblue",
+          background: "lightblue",
         }}
       >
         Edit

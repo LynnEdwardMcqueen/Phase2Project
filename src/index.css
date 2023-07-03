@@ -14,4 +14,11 @@ code {
 
 div.navbar {
    background-color: cornsilk;
+   border: 10px black;
+}
+
+div#navbar {
+  border: 10px black;
+  color: yellowgreen;
+
 }

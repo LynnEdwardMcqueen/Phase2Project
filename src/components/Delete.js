@@ -12,7 +12,6 @@ function Delete( {titles, onDeletionSubmit} ) {
     })
     .then((r) => r.json())
     .then(() => {
-        debugger
         if (Number.isInteger(idForDeletion)) {
             console.log("idForDeletion Integer")
         } else {

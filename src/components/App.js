@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { useState, useEffect } from "react";
 import './App.css';
+import './../index.css';
 import Avalanche from "./Avalanche.js"
 import Broncos from "./Broncos.js"
 import Nuggets from "./Nuggets.js"
@@ -11,7 +12,7 @@ import Home from "./Home.js"
 import Add from "./Add.js"
 import Delete from "./Delete.js"
 import Edit from "./Edit.js"
-import { toBeRequired } from "@testing-library/jest-dom/matchers";
+
 
 function App() {
   const [championshipRecords, setChampionshipRecords] = useState([])

@@ -19,7 +19,6 @@ function Edit( {titles, onEditSubmit}) {
   function handleEditUpdate(updatedEntry) {
     updatedEntry.id = idForEdit
     
-    debugger
     fetch(`http://localhost:4000/Denver-Champions/${idForEdit}`, {
       method: "PATCH",
         headers: {
@@ -43,7 +42,6 @@ function Edit( {titles, onEditSubmit}) {
   }
  
   function championshipToEdit() {
-    debugger
     for (let i = 0; i < titles.length; i++) {
         if (titles[i].id === idForEdit) {
             return(titles[i])

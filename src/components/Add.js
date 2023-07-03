@@ -3,7 +3,6 @@ import ChampionshipDataForm from "./ChampionshipDataForm"
 
 function Add( {titles, onAddSubmission}) {
   function handleAddedEntrySubmission(newEntry) {
-    debugger
     fetch("http://localhost:4000/Denver-Champions", {
       method: "POST",
       headers: {
