@@ -5,56 +5,56 @@
       "team": "Broncos",
       "year": 1998,
       "mvp": "Terrell Davis",
-      "image": "https://www.denverpost.com/2017/02/03/terrell-davis-denver-broncos/"
+      "image": "../pictures/terrell_davis_001.webp"
     },
     {
       "id": 2,
       "team": "Broncos",
       "year": 1999,
       "mvp": "John Elway",
-      "image": "https://www.ihavenet.com/nfl-superbowl-XXXIII-broncos-falcons.html"
+      "image": "../pictures/John-Elway.jpg"
     },
     {
       "id": 3,
       "team": "Broncos",
       "year": 2016,
       "mvp": "Vonn Miller",
-      "image": "https://profootballtalk.nbcsports.com/2016/02/07/von-miller-wins-super-bowl-50-mvp/"
+      "image": "../pictures/vonn-miller.jpg"
     },
     {
       "id": 4,
       "team": "Rockies",
       "year": 2007,
       "mvp": "Todd Helton",
-      "image": "https://roxpile.com/2017/09/18/colorado-rockies-history-recalling-rocktober-streak/"
+      "image": "../pictures/todd-helton.webp"
     },
     {
       "id": 5,
       "team": "Avalanche",
       "year": 1996,
       "mvp": "Joe Sakic",
-      "image": "https://thehockeywriters.com/docs/joe-sakic/"
+      "image": "../pictures/joe-sakic.jpg"
     },
     {
       "id": 6,
       "team": "Avalanche",
       "year": 2001,
       "mvp": "Patrick Roy",
-      "image": "https://www.ebay.com/itm/153436361758"
+      "image": "../pictures/patrick-roy.png"
     },
     {
       "id": 7,
       "team": "Avalanche",
       "year": 2022,
       "mvp": "Kale Makar",
-      "image": "https://www.nhl.com/news/avalanche-makar-wins-conn-smythe-trophy/c-334744850"
+      "image": "../pictures/kale-makar.jpg"
     },
     {
       "id": 8,
       "team": "Nuggets",
       "year": 2022,
       "mvp": "Nikola Jokic",
-      "image": "https://www.sportingnews.com/us/nba/news/nikola-jokic-lost-finals-mvp-trophy-nuggets/ykvuecvgxsw4fn5fnkp8w1jl"
+      "image": "../pictures/nikola-jokic.webp"
     }
   ]
 }

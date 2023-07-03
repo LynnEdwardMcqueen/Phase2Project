@@ -64,7 +64,10 @@ function App() {
     setChampionshipRecords([...championshipRecords, newChampionship])
   }
 
-
+  debugger
+  console.log()
+  let testList = championshipRecordsFilter("Broncos")
+  debugger
 
 
   return (
