@@ -35,7 +35,7 @@ function Edit( {titles, onEditSubmit}) {
         .then((r) => r.json())
         .then((updatedData) => {
 
-          console.log(updatedData)
+
           debugger
           onEditSubmit(updatedData)
         });

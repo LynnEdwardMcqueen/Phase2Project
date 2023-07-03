@@ -20,8 +20,6 @@ function App() {
   useEffect(() => {fetch("http://localhost:4000/Denver-Champions")
   .then((response) => response.json())
   .then((data) => {
-    console.log("Here at fetch")
-    console.log(data)
     setChampionshipRecords(data)
   });
   }, [] )

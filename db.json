@@ -55,6 +55,13 @@
       "year": 2022,
       "mvp": "Nikola Jokic",
       "image": "../pictures/nikola-jokic.webp"
+    },
+    {
+      "id": 9,
+      "team": "Broncos",
+      "year": "2016",
+      "mvp": "Vonn Miller",
+      "image": ""
     }
   ]
 }

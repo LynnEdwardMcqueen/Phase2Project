@@ -16,8 +16,7 @@ function Add( {titles, onAddSubmission}) {
     })
   }
   
-  console.log("Add")
-  console.log(titles)
+
   let newEntry = {id:null, team:"", mvp: "", year:"", image: ""}
   return (
     <ChampionshipDataForm titleToEdit = {newEntry} formVisibility = "visible" onDataFormSubmit = {handleAddedEntrySubmission}/>

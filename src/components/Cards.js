@@ -39,7 +39,7 @@ function Cards ({championList}) {
           
       }
   }
-    console.log(championList[0].image)
+    
     debugger
     return (
     <div>
