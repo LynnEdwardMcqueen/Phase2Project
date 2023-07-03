@@ -58,7 +58,7 @@ function App() {
   }
 
   function addChampionship(newChampionship) {
-    debugger setChampionshipRecords([...championshipRecords, newChampionship])
+    setChampionshipRecords([...championshipRecords, newChampionship])
   }
 
   return (

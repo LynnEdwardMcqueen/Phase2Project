@@ -11,15 +11,8 @@
       "id": 2,
       "team": "Broncos",
       "year": 1999,
-      "mvp": "John Elway",
+      "mvp": "Moe Howard",
       "image": "../pictures/John-Elway.jpg"
-    },
-    {
-      "id": 3,
-      "team": "Broncos",
-      "year": 2016,
-      "mvp": "Vonn Miller",
-      "image": "../pictures/vonn-miller.jpg"
     },
     {
       "id": 4,
@@ -55,13 +48,6 @@
       "year": 2022,
       "mvp": "Nikola Jokic",
       "image": "../pictures/nikola-jokic.webp"
-    },
-    {
-      "id": 9,
-      "team": "Broncos",
-      "year": "2016",
-      "mvp": "Vonn Miller",
-      "image": ""
     }
   ]
 }
