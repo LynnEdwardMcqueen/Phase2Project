@@ -15,7 +15,6 @@ import VonnMiller from '../pictures/vonn-miller.jpg'
 
 function Cards ({championList}) {
     
-    debugger
 
   function pictureServer(player) {
     switch (player) {
@@ -40,7 +39,7 @@ function Cards ({championList}) {
       }
   }
     
-    debugger
+  
     return (
     <div>
         {championList.map((title) => {

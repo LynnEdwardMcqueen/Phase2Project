@@ -36,7 +36,7 @@ function Edit( {titles, onEditSubmit}) {
         .then((updatedData) => {
 
 
-          debugger
+        
           onEditSubmit(updatedData)
         });
   }

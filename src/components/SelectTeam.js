@@ -3,7 +3,6 @@ import React from "react";
 
 function SelectTeam({titlesList, actionName, onSelectValueChange, onSubmitHandler}) {
 
-  debugger
   return(
     <form className="DeleteItem" onSubmit= {onSubmitHandler}>
       <p>Which championship do you want to {actionName}?</p>

@@ -58,15 +58,8 @@ function App() {
   }
 
   function addChampionship(newChampionship) {
-    debugger
-    setChampionshipRecords([...championshipRecords, newChampionship])
+    debugger setChampionshipRecords([...championshipRecords, newChampionship])
   }
-
-  debugger
-
-  let testList = championshipRecordsFilter("Broncos")
-  debugger
-
 
   return (
 
